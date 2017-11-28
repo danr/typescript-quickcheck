@@ -1,0 +1,53 @@
+{
+  "name": "typescript-quickcheck",
+  "version": "0.1.0",
+  "description": "Property-based testing for Type Script",
+  "author": "Dan Rosén",
+  "license": "MIT",
+  "main": "typescript-quickcheck.js",
+  "typings": "typescript-quickcheck.d.ts",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/tape": "^4.2.30",
+    "covert": "^1.1.0",
+    "tap-diff": "^0.1.1",
+    "tape": "^4.8.0",
+    "ts-node": "^3.3.0",
+    "typescript": "^2.4.2",
+    "uglify-js": "^3.1.7"
+  },
+  "scripts": {
+    "pretest": "> test/reactive-lens.doctest.ts typescript-doctest src/*.ts -s 'import { Store, Lens, Undo } from \"../src/reactive-lens\"' -t && tsc test/*.ts",
+    "test": "tape test/*js | tap-diff",
+    "precoverage": "tsc test/*.ts",
+    "coverage": "covert test/*js",
+    "compile": "tsc",
+    "prebuild": "tsc",
+    "build": "uglifyjs typescript-quickcheck.js --mangle --toplevel --compress > typescript-quickcheck.min.js",
+    "readme": "> README.md typescript-doctest src/*.ts -i header.md -s '## API overview' --toc -s '## Documentation' --doc"
+  },
+  "keywords": [
+    "testing",
+    "test",
+    "quickcheck",
+    "jsverify",
+    "property",
+    "functional",
+    "pure",
+  ],
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danr/typescript-quickcheck.git"
+  },
+  "bugs": {
+    "url": "https://github.com/danr/typescript-quickcheck/issues"
+  },
+  "homepage": "https://github.com/danr/typescript-quickcheck#readme",
+  "files": [
+    "typescript-quickcheck.js",
+    "typescript-quickcheck.d.ts"
+  ]
+}

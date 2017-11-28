@@ -1,0 +1,8 @@
+typescript-quickcheck.js
+typescript-quickcheck.js.map
+typescript-quickcheck.d.ts
+src/typescript-quickcheck.js
+test/typescript-quickcheck.test.js
+node_modules
+*js
+test/*doctest*

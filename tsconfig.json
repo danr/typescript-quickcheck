@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "ES5",
+        "outDir": "./",
+        "noImplicitAny": true,
+        "sourceMap": false,
+        "strictNullChecks": true,
+        "declaration": true,
+        "removeComments": false,
+        "noUnusedLocals": true
+    },
+    "files": [
+        "./src/reactive-lens.ts"
+    ]
+}
